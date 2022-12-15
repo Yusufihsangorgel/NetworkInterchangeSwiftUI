@@ -11,6 +11,14 @@
 		33F4D0452949F20D0012C7CD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F4D0442949F20D0012C7CD /* ContentView.swift */; };
 		33F4D0472949F20F0012C7CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F4D0462949F20F0012C7CD /* Assets.xcassets */; };
 		33F4D04A2949F20F0012C7CD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 33F4D0492949F20F0012C7CD /* Preview Assets.xcassets */; };
+		33F4D0522949F2410012C7CD /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F4D0512949F2410012C7CD /* UserModel.swift */; };
+		33F4D0552949F24F0012C7CD /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F4D0542949F24F0012C7CD /* WebService.swift */; };
+		33F4D0582949FE160012C7CD /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 33F4D0572949FE160012C7CD /* Alamofire */; };
+		33F4D05C294A1B040012C7CD /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F4D05B294A1B040012C7CD /* UserViewModel.swift */; };
+		33F4D063294A1EF30012C7CD /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 33F4D062294A1EF30012C7CD /* Kingfisher */; };
+		33F4D066294A1F040012C7CD /* ActivityIndicatorView in Frameworks */ = {isa = PBXBuildFile; productRef = 33F4D065294A1F040012C7CD /* ActivityIndicatorView */; };
+		33FEBB11294A8ED400147D98 /* LocalService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEBB10294A8ED400147D98 /* LocalService.swift */; };
+		33FEBB13294A93B300147D98 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33FEBB12294A93B300147D98 /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +27,12 @@
 		33F4D0442949F20D0012C7CD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		33F4D0462949F20F0012C7CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		33F4D0492949F20F0012C7CD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		33F4D0512949F2410012C7CD /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		33F4D0542949F24F0012C7CD /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		33F4D05B294A1B040012C7CD /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		33FEBB0F294A8E6400147D98 /* users.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = users.json; sourceTree = "<group>"; };
+		33FEBB10294A8ED400147D98 /* LocalService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalService.swift; sourceTree = "<group>"; };
+		33FEBB12294A93B300147D98 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33F4D063294A1EF30012C7CD /* Kingfisher in Frameworks */,
+				33F4D066294A1F040012C7CD /* ActivityIndicatorView in Frameworks */,
+				33F4D0582949FE160012C7CD /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +68,13 @@
 		33F4D0412949F20D0012C7CD /* NetworkInterchangeSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
-				33F4D0422949F20D0012C7CD /* NetworkInterchangeSwiftUIApp.swift */,
-				33F4D0442949F20D0012C7CD /* ContentView.swift */,
-				33F4D0462949F20F0012C7CD /* Assets.xcassets */,
+				33FEBB0F294A8E6400147D98 /* users.json */,
+				33F4D05F294A1D710012C7CD /* Assets */,
+				33F4D05E294A1D6B0012C7CD /* App */,
+				33F4D05D294A1D610012C7CD /* View */,
+				33F4D05A294A154B0012C7CD /* ViewModel */,
+				33F4D0532949F2440012C7CD /* Service */,
+				33F4D0502949F2370012C7CD /* Model */,
 				33F4D0482949F20F0012C7CD /* Preview Content */,
 			);
 			path = NetworkInterchangeSwiftUI;
@@ -65,6 +86,56 @@
 				33F4D0492949F20F0012C7CD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		33F4D0502949F2370012C7CD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				33F4D0512949F2410012C7CD /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		33F4D0532949F2440012C7CD /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				33F4D0542949F24F0012C7CD /* WebService.swift */,
+				33FEBB10294A8ED400147D98 /* LocalService.swift */,
+				33FEBB12294A93B300147D98 /* NetworkService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		33F4D05A294A154B0012C7CD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				33F4D05B294A1B040012C7CD /* UserViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		33F4D05D294A1D610012C7CD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				33F4D0442949F20D0012C7CD /* ContentView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		33F4D05E294A1D6B0012C7CD /* App */ = {
+			isa = PBXGroup;
+			children = (
+				33F4D0422949F20D0012C7CD /* NetworkInterchangeSwiftUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		33F4D05F294A1D710012C7CD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				33F4D0462949F20F0012C7CD /* Assets.xcassets */,
+			);
+			path = Assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +154,11 @@
 			dependencies = (
 			);
 			name = NetworkInterchangeSwiftUI;
+			packageProductDependencies = (
+				33F4D0572949FE160012C7CD /* Alamofire */,
+				33F4D062294A1EF30012C7CD /* Kingfisher */,
+				33F4D065294A1F040012C7CD /* ActivityIndicatorView */,
+			);
 			productName = NetworkInterchangeSwiftUI;
 			productReference = 33F4D03F2949F20D0012C7CD /* NetworkInterchangeSwiftUI.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +187,11 @@
 				Base,
 			);
 			mainGroup = 33F4D0362949F20D0012C7CD;
+			packageReferences = (
+				33F4D0562949FE160012C7CD /* XCRemoteSwiftPackageReference "Alamofire" */,
+				33F4D061294A1EF30012C7CD /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				33F4D064294A1F040012C7CD /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */,
+			);
 			productRefGroup = 33F4D0402949F20D0012C7CD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,7 +219,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				33F4D0452949F20D0012C7CD /* ContentView.swift in Sources */,
+				33F4D0522949F2410012C7CD /* UserModel.swift in Sources */,
+				33F4D0552949F24F0012C7CD /* WebService.swift in Sources */,
+				33F4D05C294A1B040012C7CD /* UserViewModel.swift in Sources */,
 				33F4D0432949F20D0012C7CD /* NetworkInterchangeSwiftUIApp.swift in Sources */,
+				33FEBB11294A8ED400147D98 /* LocalService.swift in Sources */,
+				33FEBB13294A93B300147D98 /* NetworkService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,6 +425,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		33F4D0562949FE160012C7CD /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		33F4D061294A1EF30012C7CD /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		33F4D064294A1F040012C7CD /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/ActivityIndicatorView.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		33F4D0572949FE160012C7CD /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F4D0562949FE160012C7CD /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		33F4D062294A1EF30012C7CD /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F4D061294A1EF30012C7CD /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		33F4D065294A1F040012C7CD /* ActivityIndicatorView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 33F4D064294A1F040012C7CD /* XCRemoteSwiftPackageReference "ActivityIndicatorView" */;
+			productName = ActivityIndicatorView;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 33F4D0372949F20D0012C7CD /* Project object */;
 }
